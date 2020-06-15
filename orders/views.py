@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Menu
 
 # Create your views here.
 def index(request):
@@ -7,7 +8,21 @@ def index(request):
 
 
 def menu(request):
-    menu = "Here's the  menu from  the db"
-    return render(request, "orders/menu.html",  {
-        "menu": menu
+    context = {
+        "menu": Menu.objects.all()
+    }
+    return render(request, "orders/menu.html", context)
+
+
+def about(request):
+    about = "About Pinocchio's"
+    return render(request, "orders/about.html",  {
+        "about": about
+    })
+
+
+def order(request):
+    order = "Order Pinocchio's"
+    return render(request, "orders/order.html",  {
+        "order": order
     })

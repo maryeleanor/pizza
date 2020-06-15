@@ -1,34 +1,14 @@
-{% load static %}
+{% extends "base.html" %} 
+{% block title %}
+{% endblock %}
 
+{% block page_content %}
 
-<!DOCTYPE html>
-<html  lang='en'>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{% static 'styles.css'  %}">
-    </head>
-    <body>
-
-        <div id="header">
-            <table width="100%" cellspacing="0" cellpadding="0">
-                <tbody>
-                    <tr>
-                        <td class="green" width="20%">&nbsp;</td>
-                        <td width="60%">
-                            <img height="140" src="http://www.pinocchiospizza.net/images/pinocchio_72.gif" alt="Pinocchio">
-                            <h1>Pinocchio's Pizza &amp; Subs</h1>
-                            <h2>Harvard Square<br>
-                                Cambridge, MA<br>
-                                </h2>
-                        </td>
-                        <td class="red" width="20%">&nbsp;</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="main">
+       
+        <main>
  
          <h2>Order Page</h2>
          
-        </div>
-    </body>
-</html>
+        </main> 
+
+{% endblock %}

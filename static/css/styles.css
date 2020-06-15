@@ -1,24 +1,27 @@
  /* green #239346 */
  /* red #be0027 */
 
-html, body { 
-    background-color: white;
+
+ 
+ 
+h1,h2 {  
+    margin-top:   40px !important;
+    text-align: center;   
 }
-#main {  
-    background-image: url(http://www.pinocchiospizza.net/images/pinocchio_216.gif); 
-    height: 30vh;
-    padding: 0; 
-    margin: 0;
+
+nav {
+    padding-bottom: 0px !important;
 }
-h1,h2 {
-    text-align: center; 
-    font-family: Verdana,Arial,Helvetica,sans-serif; 
-    margin: 0;
+
+.nav-link {
+    padding-bottom: 0px !important;
 }
-h1 {
-    margin-bottom: 0.5em; 
-    margin-top: 0.5em;
+
+nav h3{
+    margin-bottom: 0px !important; 
+    padding-top: 30px;
 }
+ 
 
 .green { 
     background-color: #239346; 
@@ -26,36 +29,13 @@ h1 {
 .red {
     background-color: #be0027;
 }
+
 #header img { 
     float: right; 
-    padding-right: 1em;
-}
-#header table { 
-    border: thin solid black; 
+    padding-right: 2em;
+    padding-top: 15px; 
 }
 
-div.callout { 
-    font-family: Verdana,Arial,Helvetica,sans-serif;
-    font-size: 1.25em;  
-    text-align: center; 
-    border: medium solid #be0027;
-    background-color: #ffffff; 
-    margin: 0.5em; padding: 0.5em;
-}
-
-div.callout ul {
-    font-size: 80%; 
-    text-align: left; 
-}
-
-img.building {
-    margin: 1em; 
-    float: left;
-}
-
-td {
-    vertical-align: top
-}
 
 #menu {
     text-align: center; 
@@ -114,23 +94,7 @@ td {
     color: #fff; 
     border-bottom: 1px solid #239346;
 }
-
-#main { 
-    margin-top: 0; 
-}
-
-#main table { 
-    margin-top: 0;
-}
-
-#main table, #main table tr, #main table td {
-    padding: 0; 
-    margin: 0;
-}
-
-td.price { 
-    text-align: right; 
-}
+  
 
 table.foodmenu { 
     border: none; 
@@ -145,15 +109,4 @@ div.leftcolumn {
     float: left; width: 25%; 
     margin-left: 1em; 
     padding: 1em; 
-}
-table.hours td {
-    text-align: left;
-
-}
-div.internalmenunav { 
-    text-align: center; 
-    font-size: 64%; 
-    margin-top: 1em; 
-    margin-bottom: 1em; 
-    background-color: #cccccc;
-}
+}  
