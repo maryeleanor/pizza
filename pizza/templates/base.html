@@ -39,6 +39,17 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="{% url 'menu' %}"><h3>Menu</h3></a>
                                         </li>
+                                        {% if user.is_authenticated  %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'logout' %}">
+                                                <h3>Logout</h3>
+                                            </a>
+                                        </li>
+                                        {%  else  %}
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'login' %}"> <h3>Login to Order</h3></a>
+                                        </li>
+                                        {% endif %}
                                     </ul>
                                 </div>
                             </nav>

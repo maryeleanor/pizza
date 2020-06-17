@@ -3,13 +3,42 @@
 {% endblock %}
 
 {% block page_content %}
+ <h1>  Menu </h1> 
+<div class="row" >
 
-    <h1>  Menu Page </h1>
-
-    <h3> Neapoliton (Regular) Pizza's </h3>
-    <ul>
-    {% for item in  menu %}
-         <li> {{ item }} </li>
+    <div class="menu-page col-6">
+     {% for cat in  category %}
+     <h3> {{ cat }} </h3>
+        <ul> 
+        {% for item in menu %}
+            {% if item.category == cat %}
+        <div style="margin-left:200px;">
+                {% if item.size ==  'small' %}
+                <li> {{ item.item }} | {{ item.size }} - {{ item.price }} </li> 
+                {% endif %}
+        </div>
+        <div  style="margin-left:400px;">
+                {% if item.size ==  'large' %}
+                <li> {{ item.item }} | {{ item.size }} - {{ item.price }} </li>
+                {% endif %}
+        </div>
+       
+            {% endif %}
+        {% endfor %}
+        </ul> 
+        <br><br>
     {% endfor %}
-    </ul>
+    </div>
+
+    <div class="menu-page cart col-2">
+        <h4> Cart </h4>
+        {% for item in order_placed %}
+        <li>
+            {{ item }}
+        </li>
+        {% endfor %}
+    </div>
+
+</div>
+
 {% endblock %}

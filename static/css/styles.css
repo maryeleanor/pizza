@@ -1,8 +1,25 @@
  /* green #239346 */
  /* red #be0027 */
 
+main {
+    margin-left: 100px;
+    margin-right: 100px;
+}
 
+main * {
+    padding: 10px;
+}
  
+.forms {
+    margin-top: 60px;
+    margin-left:200px;
+    margin-right: 200px;
+}
+
+.menu-page{
+    margin-left: 100px;
+    margin-right: 100px;
+}
  
 h1,h2 {  
     margin-top:   40px !important;
