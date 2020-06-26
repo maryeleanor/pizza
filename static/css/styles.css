@@ -17,13 +17,20 @@ main * {
 }
 
 .menu-page{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-content: flex-start 
 }
- 
+
+
+
 h1,h2 {  
     margin-top:   40px !important;
     text-align: center;   
+}
+
+h4{
+    text-align: center;
 }
 
 nav {
@@ -39,6 +46,9 @@ nav h3{
     padding-top: 30px;
 }
  
+.cart{
+    align-self: flex-start;
+}
 
 .green { 
     background-color: #239346; 
@@ -53,65 +63,19 @@ nav h3{
     padding-top: 15px; 
 }
 
-
-#menu {
-    text-align: center; 
+.menu-buttons{
+    display: flex-wrap;
 }
 
-#menu ul {
-    list-style: none; 
-    background-color: #fff; 
-    padding-top: 0.5em; 
-    padding-bottom: 2px;
-    margin-bottom: 0; 
-    font-weight: bold; 
-    font-family: Arial,Verdana,Helvetica,sans-serif;
-    border-bottom: 1px solid black; 
+.menu-buttons button{
+    margin: 10px; 
+    border: .5px black solid;
+    padding: 10px;
 }
 
-#menu ul li { 
-    display: inline; 
-    list-style: none; 
-    display: inline;
-    margin: 0;
-}
-
-#menu ul li a {
-    padding: 0.2em 0.5em 0.2em 0.5em; 
-    font-size: 80%;
-    color: #be0027; 
-    font-family: Verdana,Arial,Helvetica,sans-serif;
-    font-weight: bold; 
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-left: 0.5em; 
-    margin-right: 0.5em; 
-    background-color: #ffffff; 
-    text-decoration: none;
-}
-
-#menu a:link {
-    text-decoration: none;
-}
-
-#menu a:visited {
-    text-decoration: none;
-}
-
-#menu a:hover {
-    text-decoration: none; 
-    color: #ffffff; 
-    background-color: #be0027;
-}
-
-#menu #youarehere { 
-    background-color: #239346; 
-    color: #fff; 
-    border-bottom: 1px solid #239346;
-}
-  
+.checkbox-inline{
+    padding: 10px;
+ } 
 
 table.foodmenu { 
     border: none; 

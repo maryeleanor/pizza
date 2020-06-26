@@ -18,7 +18,8 @@ def menu_page(request):
     context = {
         "category": Category.objects.all(),
         "menu": Menu.objects.all(),
-        "order_placed": Cart.objects.all()
+        "order_placed": Cart.objects.all(), 
+        "includedTopping": IncludedTopping.objects.all(),
     }
     return render(request, "orders/menu.html", context)
 

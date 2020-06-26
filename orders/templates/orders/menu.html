@@ -4,32 +4,47 @@
 
 {% block page_content %}
  <h1>  Menu </h1> 
-<div class="row" >
 
-    <div class="menu-page col-6">
-     {% for cat in  category %}
-     <h3> {{ cat }} </h3>
-        <ul> 
-        {% for item in menu %}
-            {% if item.category == cat %}
-        <div style="margin-left:200px;">
-                {% if item.size ==  'small' %}
-                <li> {{ item.item }} | {{ item.size }} - {{ item.price }} </li> 
-                {% endif %}
+ <!-- row with each category, toppinge below and cart on right  -->
+<div class="row">
+{% for cat in category %}
+
+    <div class="menu-page col-8">
+    <h3>{{ cat }}</h3>
+     
+        <!-- row with small and large within each category -->
+        <div class="row">
+            <div class="col-4">
+                <div class="menu-buttons"> 
+                <h5>Small</h5>
+                {% for item in menu %}
+                    {% if item.category == cat %}
+                        {% if item.size == "small" %}
+                        <button class="btn btn-light" > {{ item.item }} | {{ item.size }} - {{ item.price }} </button> 
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </div> 
+            </div>
+
+            <div class="col-4">
+                <div class="menu-buttons">
+                <h5>Large</h5>
+                {% for item in menu %}
+                    {% if item.category == cat %}
+                        {% if item.size == "large" %}
+                        <button class="btn btn-light"> {{ item.item }} | {{ item.size }} - {{ item.price }} </button>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                </div>
+            </div>
         </div>
-        <div  style="margin-left:400px;">
-                {% if item.size ==  'large' %}
-                <li> {{ item.item }} | {{ item.size }} - {{ item.price }} </li>
-                {% endif %}
-        </div>
-       
-            {% endif %}
-        {% endfor %}
-        </ul> 
-        <br><br>
-    {% endfor %}
+
+    <br>
     </div>
 
+    {% if cat.category_name == "Regular Neapolitan Pizzas" %}
     <div class="menu-page cart col-2">
         <h4> Cart </h4>
         {% for item in order_placed %}
@@ -38,7 +53,23 @@
         </li>
         {% endfor %}
     </div>
+    {% endif %}
+    
+    
+    {% if cat.category_name == "Deep-dish Sicilian Pizzas" %}
+    <div class="menu-page col-8">
+        <h4> Pizza Toppings </h4>
+        {% for toppings in includedTopping %}   
+        <label class="checkbox-inline">
+            <input type="checkbox" value="{{ toppings }}"> {{ toppings }}
+        </label>
+        {% endfor %} 
+    </div>
+    {% endif %}
 
+    {% endfor %}
+
+    
 </div>
 
 {% endblock %}
